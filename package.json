@@ -1,5 +1,5 @@
 {
-  "name": "node-api",
+  "name": "@budjetgenix/api",
   "version": "1.0.0",
   "description": "This is an api wrapper for BudjetGenix",
   "main": "build/main/index.js",
@@ -41,9 +41,7 @@
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {
-    "@bitauth/libauth": "^1.17.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
@@ -102,5 +100,8 @@
     "exclude": [
       "**/*.spec.js"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
