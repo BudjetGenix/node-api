@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/kymppi/node-api",
+  "repository": "https://github.com/budjetgenix/node-api",
   "license": "MIT",
   "keywords": [],
   "scripts": {
