@@ -24,7 +24,7 @@ jobs:
         run: |
             git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
             yarn doc:publish -u "github-actions-bot <support+actions@github.com>"
-          env:
+        env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm publish
         env:
