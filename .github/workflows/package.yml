@@ -7,7 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read/write
       packages: write
     steps:
       - uses: actions/checkout@v2
