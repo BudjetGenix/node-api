@@ -1,10 +1,11 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
   "words": [
-    "bitjson",
     "bitauth",
+    "bitjson",
+    "budjetgenix",
     "cimg",
     "circleci",
     "codecov",
@@ -18,10 +19,12 @@
     "libauth",
     "mkdir",
     "prettierignore",
+    "Promisified",
     "sandboxed",
     "transpiled",
     "typedoc",
-    "untracked"
+    "untracked",
+    "urql"
   ],
   "flagWords": [],
   "ignorePaths": [
