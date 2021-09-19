@@ -1,9 +1,11 @@
+import 'isomorphic-unfetch';
+
 import {
   Client,
   createClient,
   defaultExchanges,
   OperationResult,
-  PromisifiedSource,
+  PromisifiedSource
 } from '@urql/core';
 import { DocumentNode } from 'graphql';
 
@@ -30,7 +32,7 @@ export class APIClient {
   constructor(options: { url: string }) {
     this.client = createClient({
       url: options.url,
-      exchanges: defaultExchanges,
+      exchanges: defaultExchanges
     });
     this.usersHandler = new UsersHandler(this);
   }
