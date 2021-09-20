@@ -23,6 +23,7 @@
     "sandboxed",
     "transpiled",
     "typedoc",
+    "unfetch",
     "untracked",
     "urql"
   ],
