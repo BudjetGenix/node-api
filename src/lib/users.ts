@@ -1,5 +1,8 @@
 import { gql } from '@urql/core';
 
+import { User } from '../types/graphql';
+import { QueryResponse } from '../types/query';
+
 import { APIClient } from './client';
 
 export class UsersHandler {
@@ -13,7 +16,11 @@ export class UsersHandler {
     return 'Hi!';
   }
 
-  async register(email: string, password: string, name: string) {
+  async register(
+    email: string,
+    password: string,
+    name: string
+  ): Promise<QueryResponse<User>> {
     const mutation = gql`
       mutation createUser($input: CreateUserInput!) {
         createUser(createUserInput: $input) {
@@ -30,11 +37,14 @@ export class UsersHandler {
         input: {
           email,
           name,
-          password,
-        },
+          password
+        }
       })
       .toPromise();
 
-    return result;
+    return {
+      data: result.data,
+      error: result.error
+    };
   }
 }
