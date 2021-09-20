@@ -13,7 +13,7 @@ import { UsersHandler } from './users';
 
 export class APIClient {
   private client: Client;
-  private usersHandler: UsersHandler;
+  public readonly users: UsersHandler;
 
   /**
    * ### Example (es imports)
@@ -34,7 +34,7 @@ export class APIClient {
       url: options.url,
       exchanges: defaultExchanges
     });
-    this.usersHandler = new UsersHandler(this);
+    this.users = new UsersHandler(this);
   }
 
   /**
@@ -83,9 +83,5 @@ export class APIClient {
     variables?: {}
   ): PromisifiedSource<OperationResult<any, {}>> {
     return this.client.mutation(mutation, variables);
-  }
-
-  users() {
-    return this.usersHandler;
   }
 }
